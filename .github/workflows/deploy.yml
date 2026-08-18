@@ -35,4 +35,4 @@ jobs:
             docker pull 281175gjj/dasheng-game:latest
             docker stop dasheng-game || true
             docker rm dasheng-game || true
-            docker run -d -p 8080:80 --name dasheng-game 281175gjj/dasheng-game:latest
+            docker run -d --restart=always -p 8080:80 --name dasheng-game 281175gjj/dasheng-game:latest
